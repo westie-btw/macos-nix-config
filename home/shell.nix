@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -14,10 +15,23 @@
     };
 
     shellAliases = {
-      ls = "eza";
-      ll = "eza -l";
       la = "eza -la";
       nixcfg = "just --justfile ${config.home.homeDirectory}/.config/nix/Justfile";
     };
+  };
+
+  programs.eza = {
+    enable = true;
+    enableZshIntegration = true;
+    git = true;
+
+    extraOptions = [
+      "--group-directories-first"
+    ];
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
   };
 }

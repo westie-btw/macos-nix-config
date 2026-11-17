@@ -1,20 +1,26 @@
 { primaryUser, ... }:
 {
   imports = [
+    # Core
     ./packages.nix
-    ./git.nix
-    ./aria2.nix
-    ./zoxide.nix
-    ./zsh.nix
-    ./nixvim.nix
-    ./bat.nix
+    ./shell.nix
+
+    # Apps
+    ./apps/kitty.nix
+
+    # Tools
+    ./tools/aria2.nix
+    ./tools/bat.nix
+    ./tools/git.nix
+    ./tools/nvim.nix
+    ./tools/ollama.nix
+    ./tools/zoxide.nix
   ];
 
   home = {
     username = primaryUser;
     stateVersion = "26.05";
 
-    # Suppress the "last login" message in new terminal windows
     file.".hushlogin".text = "";
   };
 

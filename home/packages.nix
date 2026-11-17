@@ -1,29 +1,28 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    # Dev tools
+    # Development
     gh
     just
 
-    # Terminal Utilities
-    curl
-    eza
+    # Editor
+    neovim
+    lazygit
+    nodejs
+    tree-sitter
+
+    # Terminal utilities
     fd
-    fzf
     ripgrep
     tree
-    #ollama
 
-    # Programming Languages & Toolchains
-    python3
+    # Languages and toolchains
     cmake
+    python3
 
-    # Media, Audio & Metadata Tools
+    # Media and metadata
     exiftool
     ffmpeg
     yt-dlp
-
-    # nixpkg only apps
-    #ayugram-desktop
   ];
 }

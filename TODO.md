@@ -1,23 +1,18 @@
 # TODO
 
 ### 🔴 High Priority
-- [ ] Reorganize and module non-moduled flags
-- [ ] Rename and organize files/directories 
-- [ ] 
+- [ ] Make just switch simpler and work without being in .config/nix
 
 ### 🟠 Medium Priority
 - [ ] Try Fish
 - [ ] Try Starship
-- [x] Edit bat.nix
-- [x] Resolve tap trust in homebrew.nix
+- [ ] Shell alies for just file replacement
+- [ ] Make the checks for eg xcode and fulldisk acsess at one time and simplify  
+ 
 
 ### 🟢 Low Priority
-- [x] Make Justfile work without being in .config/nix 
-- [x] Update README.md
-- [ ] Configure terminal 
+- [ ] Update README.md
+- [ ] Configure terminal
 - [ ] LibreWolf module
 
 ### ⚪ Ideas
-- [ ] Glow,
-- [ ] 
-- [ ] 

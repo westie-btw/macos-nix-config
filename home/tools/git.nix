@@ -1,20 +1,28 @@
-{ primaryUser, ... }:
-{
+_: {
   programs.git = {
     enable = true;
 
-    ignores = [ ".DS_Store" ];
+    ignores = [
+      ".DS_Store"
+    ];
 
     settings = {
-      user.name = "westie";
-      user.email = "westie.dev@proton.me";
+      user = {
+        name = "westie";
+        email = "westie.dev@proton.me";
+      };
 
-      github.user = primaryUser;
+      github.user = "dev-westie";
 
       init.defaultBranch = "main";
-      pull.rebase = true; # `git pull` replays local commits instead of merge-committing
-      push.autoSetupRemote = true; # `git push` on a new branch works without --set-upstream
+
       core.editor = "nvim";
+
+      # `git pull` replays local commits instead of merge-committing.
+      pull.rebase = true;
+
+      # `git push` on a new branch works without --set-upstream.
+      push.autoSetupRemote = true;
     };
   };
 }

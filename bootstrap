@@ -1,5 +1,4 @@
 #!/bin/bash
-# First-time setup on a fresh Mac. The repo must already be cloned to ~/.config/nix.
 set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
@@ -17,7 +16,6 @@ if ! sqlite3 "/Library/Application Support/com.apple.TCC/TCC.db" "SELECT 1;" &>/
   echo "   Enable it in System Settings then re-run this script."
   exit 1
 fi
-
 
 echo "==> Checking for Nix..."
 if ! command -v nix >/dev/null 2>&1; then

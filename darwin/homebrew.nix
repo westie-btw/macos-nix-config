@@ -16,35 +16,30 @@
     };
 
     casks = [
-      "claude"
-      "ghostty"
       "maccy"
       "protonvpn"
       "raycast"
-      "whatsapp"
       "legcord"
-      #"roblox"
       "shottr"
       "iina"
-      #"prismlauncher"
       "librewolf"
       "photocraft"
       "spotifast"
-      #"keepassxc"
+      "zapfast"
+      "utm"
+      "helium-browser"
+      "roblox"
     ];
 
     brews = [
       "mole"
       "opencode"
-      #"xcodegen"
-      #"ghidra"
+      "rustup"
+      # "ghidra"
     ];
 
-    taps = [
-      {
-        name = "crmne/tap";
-        trusted = true;
-      }
+    taps = map (name: { inherit name; trusted = true; }) [
+      "crmne/tap"
     ];
   };
 }

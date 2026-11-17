@@ -8,10 +8,10 @@
       continue = true;
       file-allocation = "none";
 
-      max-connection-per-server = "16";
-      split = "16";
+      max-connection-per-server = 16;
+      split = 16;
 
-      seed-ratio = "1.5";
+      seed-ratio = 1.0;
     };
   };
 }

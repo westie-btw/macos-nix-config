@@ -7,7 +7,6 @@
     inputs.nix-homebrew.darwinModules.nix-homebrew
   ];
 
-  # Nix is managed by the Determinate installer, not nix-darwin.
   nix.enable = false;
 
   nixpkgs.hostPlatform = "aarch64-darwin";

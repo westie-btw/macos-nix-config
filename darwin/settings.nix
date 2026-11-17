@@ -1,6 +1,5 @@
 { self, ... }:
 {
-
   networking.hostName = "MacBook";
 
   security.pam.services.sudo_local.touchIdAuth = true;
@@ -11,31 +10,7 @@
     startup.chime = false;
 
     defaults = {
-      loginwindow = {
-        GuestEnabled = false;
-        DisableConsoleAccess = true;
-      };
-
-      dock = {
-        autohide = true;
-        autohide-delay = 0.0;
-        autohide-time-modifier = 0.0;
-        show-recents = false;
-        tilesize = 45;
-        persistent-apps = [ ];
-        persistent-others = [ ];
-      };
-
-      finder = {
-        AppleShowAllFiles = true;
-        AppleShowAllExtensions = true;
-        _FXShowPosixPathInTitle = true;
-        ShowPathbar = true;
-        FXPreferredViewStyle = "clmv";
-        FXEnableExtensionChangeWarning = false;
-        QuitMenuItem = true;
-      };
-
+      # Global
       NSGlobalDomain = {
         _HIHideMenuBar = true;
         NSAutomaticSpellingCorrectionEnabled = true;
@@ -47,6 +22,35 @@
         "com.apple.trackpad.scaling" = 0.4;
       };
 
+      # Login window
+      loginwindow = {
+        GuestEnabled = false;
+        DisableConsoleAccess = true;
+      };
+
+      # Dock
+      dock = {
+        autohide = true;
+        autohide-delay = 0.0;
+        autohide-time-modifier = 0.0;
+        show-recents = false;
+        tilesize = 45;
+        persistent-apps = [ ];
+        persistent-others = [ ];
+      };
+
+      # Finder
+      finder = {
+        AppleShowAllFiles = true;
+        AppleShowAllExtensions = true;
+        _FXShowPosixPathInTitle = true;
+        ShowPathbar = true;
+        FXPreferredViewStyle = "clmv";
+        FXEnableExtensionChangeWarning = false;
+        QuitMenuItem = true;
+      };
+
+      # Menu bar clock
       menuExtraClock = {
         FlashDateSeparators = false;
         Show24Hour = true;
@@ -56,6 +60,7 @@
         ShowDayOfMonth = true;
       };
 
+      # Accessibility
       universalaccess.reduceMotion = true;
       LaunchServices.LSQuarantine = false;
     };
